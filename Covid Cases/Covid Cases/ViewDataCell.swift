@@ -10,7 +10,7 @@ import UIKit
 
 class ViewDataCell: UITableViewCell {
 
-    
+    // fields for cell
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
     
