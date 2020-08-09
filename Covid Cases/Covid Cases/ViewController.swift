@@ -80,7 +80,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate
         }
         
         
-        self.performSegue(withIdentifier: "segue", sender: self)
+       // self.performSegue(withIdentifier: "segue", sender: self)
+        self.performSegue(withIdentifier: "ShowViewData", sender: self)
 
     }
     
@@ -90,6 +91,11 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate
         if segue.identifier == "segue"
         {
             let destinationVC = segue.destination as! StatsViewController
+            destinationVC.countryName = selectedCountry
+        }
+        
+        if segue.identifier == "ShowViewData" {
+            let destinationVC = segue.destination as! StatsPageController
             destinationVC.countryName = selectedCountry
         }
     }
