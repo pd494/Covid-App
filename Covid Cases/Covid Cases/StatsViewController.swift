@@ -27,11 +27,7 @@ class StatsViewController: UIViewController, CovidManagerDelegate {
         c.fetchCountry(countryName: countryName)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
 
-    }
-    
     
     func updateView(statsModel: StatsModel) {
         DispatchQueue.main.async {
