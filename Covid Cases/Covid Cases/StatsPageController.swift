@@ -33,6 +33,7 @@ class StatsPageController: UIViewController, CovidManagerDelegate {
         covidManager.fetchCountry(countryName: countryName)
     }
     
+    //MARK: - JSON View Update
     func updateView(statsModel: StatsModel) {
         DispatchQueue.main.async {
             self.dataArray.append(ViewData(content: "Country", value: self.countryName.replacingOccurrences(of: "%20", with: " ")))
@@ -41,17 +42,6 @@ class StatsPageController: UIViewController, CovidManagerDelegate {
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 //MARK: - Table View DataSource
