@@ -35,6 +35,10 @@ class ViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+        if let index = self.tableView.indexPathForSelectedRow{
+            self.tableView.deselectRow(at: index, animated: true)
+        }
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -126,15 +130,18 @@ extension ViewController: UISearchBarDelegate
             }
         }
         
-//        searching = true
-//
-//        if searchText == "" {
-//            searching = false
-//        }
         searching = searchText != ""
         
         tableView.reloadData()
         
         
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        searching = false
+        tableView.reloadData()
+    
+        searchBar.endEditing(true)
     }
 }
