@@ -32,6 +32,16 @@ class ViewController: UIViewController{
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     
     
 }
@@ -106,9 +116,25 @@ extension ViewController: UISearchBarDelegate
 {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String)
     {
-        searchCountry = countries.filter({$0.prefix(searchText.count) == searchText})
-        searching = true
+        //searchCountry = countries.filter({$0.prefix(searchText.count) == searchText})
+        
+        searchCountry = []
+        
+        for countryName in countries {
+            if countryName.lowercased().contains(searchText.lowercased()) {
+                searchCountry.append(countryName)
+            }
+        }
+        
+//        searching = true
+//
+//        if searchText == "" {
+//            searching = false
+//        }
+        searching = searchText != ""
+        
         tableView.reloadData()
+        
         
     }
 }
