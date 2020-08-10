@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SB3-zt-VXT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VAO-8h-D4s">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -29,7 +29,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jck-Ay-Mpi">
-                                <rect key="frame" x="9" y="173" width="396" height="680"/>
+                                <rect key="frame" x="9" y="173" width="396" height="631"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="ZAH-jb-KRz" style="IBUITableViewCellStyleDefault" id="duX-dx-B03">
@@ -88,7 +88,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aH7-FS-9u1">
-                                <rect key="frame" x="0.0" y="240" width="414" height="643"/>
+                                <rect key="frame" x="0.0" y="240" width="414" height="594"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="644" id="HwS-9w-I9b"/>
@@ -131,10 +131,54 @@
             </objects>
             <point key="canvasLocation" x="1339" y="115"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Identify-->
+        <scene sceneID="V94-Ja-6e3">
+            <objects>
+                <viewController id="aNa-Ds-2Q1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7YK-ZG-8Ih">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add New Feature Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9q-pC-B1N">
+                                <rect key="frame" x="120" y="438" width="174" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="xs0-hb-Z4x"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Identify" image="person.fill" catalog="system" selectedImage="person.fill" id="TkR-9J-pqx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TSL-KM-eFe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-584" y="863"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="FdV-Cs-KFq">
+            <objects>
+                <tabBarController id="VAO-8h-D4s" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="awS-iK-EMe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="SB3-zt-VXT" kind="relationship" relationship="viewControllers" id="g8K-nC-PSg"/>
+                        <segue destination="aNa-Ds-2Q1" kind="relationship" relationship="viewControllers" id="Dbs-8Z-s8Q"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kxb-fd-vwt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1877" y="361"/>
+        </scene>
+        <!--Data-->
         <scene sceneID="8NS-yn-ljJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SB3-zt-VXT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Data" image="doc.text.magnifyingglass" catalog="system" selectedImage="doc.text.magnifyingglass" id="ju7-pa-4mG"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1fn-Ga-nSf">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -152,5 +196,7 @@
     </scenes>
     <resources>
         <image name="covidart" width="2500" height="1019"/>
+        <image name="doc.text.magnifyingglass" catalog="system" width="116" height="128"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
     </resources>
 </document>
