@@ -12,6 +12,7 @@
 		1B52E54324E095AA00D8F02B /* ViewDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B52E54224E095AA00D8F02B /* ViewDataCell.xib */; };
 		1B52E54524E095CC00D8F02B /* ViewDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B52E54424E095CC00D8F02B /* ViewDataCell.swift */; };
 		240AF92D24E06EFD00809FFE /* StatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240AF92C24E06EFD00809FFE /* StatsModel.swift */; };
+		24592F1F24E307F800643FB6 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24592F1E24E307F800643FB6 /* HomePageViewController.swift */; };
 		24733A7024DE2FEE0041D76D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24733A6F24DE2FEE0041D76D /* AppDelegate.swift */; };
 		24733A7224DE2FEE0041D76D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24733A7124DE2FEE0041D76D /* SceneDelegate.swift */; };
 		24733A7424DE2FEE0041D76D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24733A7324DE2FEE0041D76D /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 		1B52E54224E095AA00D8F02B /* ViewDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewDataCell.xib; sourceTree = "<group>"; };
 		1B52E54424E095CC00D8F02B /* ViewDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDataCell.swift; sourceTree = "<group>"; };
 		240AF92C24E06EFD00809FFE /* StatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsModel.swift; sourceTree = "<group>"; };
+		24592F1E24E307F800643FB6 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		24733A6C24DE2FEE0041D76D /* Covid Cases.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid Cases.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24733A6F24DE2FEE0041D76D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24733A7124DE2FEE0041D76D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		1B52E54124E0957000D8F02B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				24592F1E24E307F800643FB6 /* HomePageViewController.swift */,
 				24733A7324DE2FEE0041D76D /* ViewController.swift */,
 				24F0D98124DF7BF000176EFA /* StatsViewController.swift */,
 				1B52E53C24E08FBD00D8F02B /* StatsPageController.swift */,
@@ -194,6 +197,7 @@
 				1B52E54524E095CC00D8F02B /* ViewDataCell.swift in Sources */,
 				1B52E53D24E08FBD00D8F02B /* StatsPageController.swift in Sources */,
 				24733A7224DE2FEE0041D76D /* SceneDelegate.swift in Sources */,
+				24592F1F24E307F800643FB6 /* HomePageViewController.swift in Sources */,
 				24F0D98224DF7BF000176EFA /* StatsViewController.swift in Sources */,
 				1B52E53F24E091AA00D8F02B /* ViewData.swift in Sources */,
 				24733A8624DE653C0041D76D /* CovidStatsManager.swift in Sources */,

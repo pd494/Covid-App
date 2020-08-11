@@ -17,6 +17,7 @@ struct CovidStatsManager
     let covidURL = "https://covid-19.dataflowkit.com/v1/"
     
     var delegate: CovidManagerDelegate?
+    var delegate2: CovidManagerDelegate?
     
     func fetchCountry(countryName: String)
     {
@@ -42,6 +43,7 @@ struct CovidStatsManager
                         if let covidData = self.parseJSON(safeData)
                         {
                             self.delegate?.updateView(statsModel: covidData)
+                            self.delegate2?.updateView(statsModel: covidData)
                         }
                     }
                 }

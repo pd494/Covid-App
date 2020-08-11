@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VAO-8h-D4s">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VAO-8h-D4s">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -134,27 +134,63 @@
         <!--Identify-->
         <scene sceneID="V94-Ja-6e3">
             <objects>
-                <viewController id="aNa-Ds-2Q1" sceneMemberID="viewController">
+                <viewController id="aNa-Ds-2Q1" customClass="HomePageViewController" customModule="Covid_Cases" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7YK-ZG-8Ih">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add New Feature Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9q-pC-B1N">
-                                <rect key="frame" x="120" y="438" width="174" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5J9-ti-l9z">
+                                <rect key="frame" x="87" y="139" width="240" height="153"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21,000,123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPc-Qo-wmY">
+                                        <rect key="frame" x="48" y="10" width="144" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World Cases" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbs-Fc-6gP">
+                                        <rect key="frame" x="71.5" y="48" width="97" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeart" translatesAutoresizingMaskIntoConstraints="NO" id="gWG-jY-SSW">
+                                        <rect key="frame" x="-360" y="70" width="960" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="TSD-UH-iOa"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="tPc-Qo-wmY" firstAttribute="top" secondItem="5J9-ti-l9z" secondAttribute="top" constant="10" id="1L3-QI-yUX"/>
+                                    <constraint firstItem="kbs-Fc-6gP" firstAttribute="centerX" secondItem="5J9-ti-l9z" secondAttribute="centerX" id="Bit-S5-ysR"/>
+                                    <constraint firstAttribute="height" constant="153" id="HLg-aW-H9d"/>
+                                    <constraint firstItem="tPc-Qo-wmY" firstAttribute="centerX" secondItem="5J9-ti-l9z" secondAttribute="centerX" id="SdI-HC-K02"/>
+                                    <constraint firstItem="gWG-jY-SSW" firstAttribute="top" secondItem="kbs-Fc-6gP" secondAttribute="bottom" constant="1" id="b2p-6j-L3K"/>
+                                    <constraint firstItem="gWG-jY-SSW" firstAttribute="centerX" secondItem="5J9-ti-l9z" secondAttribute="centerX" id="gKQ-a9-iSI"/>
+                                    <constraint firstItem="kbs-Fc-6gP" firstAttribute="top" secondItem="tPc-Qo-wmY" secondAttribute="bottom" constant="3" id="yow-Wc-djE"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.96130555868148804" green="0.77251316745877374" blue="0.69641919973832278" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="5J9-ti-l9z" firstAttribute="centerX" secondItem="7YK-ZG-8Ih" secondAttribute="centerX" id="9Ji-Vp-jX5"/>
+                            <constraint firstItem="xs0-hb-Z4x" firstAttribute="trailing" secondItem="5J9-ti-l9z" secondAttribute="trailing" constant="87" id="NTH-DN-89E"/>
+                            <constraint firstItem="5J9-ti-l9z" firstAttribute="leading" secondItem="xs0-hb-Z4x" secondAttribute="leading" constant="87" id="PIu-86-VTJ"/>
+                            <constraint firstItem="5J9-ti-l9z" firstAttribute="top" secondItem="xs0-hb-Z4x" secondAttribute="top" constant="95" id="Rar-RW-EBv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xs0-hb-Z4x"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Identify" image="person.fill" catalog="system" selectedImage="person.fill" id="TkR-9J-pqx"/>
+                    <connections>
+                        <outlet property="casesLabel" destination="tPc-Qo-wmY" id="fWB-RH-gac"/>
+                        <outlet property="worldCasesView" destination="5J9-ti-l9z" id="uHR-qA-zrR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TSL-KM-eFe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-584" y="863"/>
+            <point key="canvasLocation" x="-584.05797101449275" y="862.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="FdV-Cs-KFq">
@@ -197,6 +233,7 @@
     <resources>
         <image name="covidart" width="2500" height="1019"/>
         <image name="doc.text.magnifyingglass" catalog="system" width="116" height="128"/>
+        <image name="homeart" width="960" height="599"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
     </resources>
 </document>
