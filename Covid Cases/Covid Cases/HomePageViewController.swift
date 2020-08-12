@@ -12,11 +12,12 @@ class HomePageViewController: UIViewController, CovidManagerDelegate
 {
     
     
-    @IBOutlet weak var casesLabel: UILabel!
     
     @IBOutlet weak var worldCasesView: UIView!
     
     var c = CovidStatsManager()
+    
+    @IBOutlet weak var casesLabel: UILabel!
     
     override func viewDidLoad()
     {
@@ -37,5 +38,8 @@ class HomePageViewController: UIViewController, CovidManagerDelegate
         }
     }
     
-
+    @IBAction func tabChanged(_ sender: UISegmentedControl)
+    {
+      
+    }
 }

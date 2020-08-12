@@ -102,11 +102,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.identifier == "segue"
-        {
-            let destinationVC = segue.destination as! StatsViewController
-            destinationVC.countryName = selectedCountry
-        }
+        
         
         if segue.identifier == "ShowViewData" {
             let destinationVC = segue.destination as! StatsPageController
