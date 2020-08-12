@@ -20,6 +20,7 @@
 		24733A7924DE2FEF0041D76D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24733A7824DE2FEF0041D76D /* Assets.xcassets */; };
 		24733A7C24DE2FEF0041D76D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24733A7A24DE2FEF0041D76D /* LaunchScreen.storyboard */; };
 		24733A8624DE653C0041D76D /* CovidStatsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24733A8524DE653C0041D76D /* CovidStatsManager.swift */; };
+		2498414E24E38EC1004AA652 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2498414D24E38EC1004AA652 /* StatsViewController.swift */; };
 		24B3039424DF243F00389D98 /* CovidData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B3039324DF243F00389D98 /* CovidData.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		24733A7B24DE2FEF0041D76D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24733A7D24DE2FEF0041D76D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24733A8524DE653C0041D76D /* CovidStatsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidStatsManager.swift; sourceTree = "<group>"; };
+		2498414D24E38EC1004AA652 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		24B3039324DF243F00389D98 /* CovidData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +71,7 @@
 				24592F1E24E307F800643FB6 /* HomePageViewController.swift */,
 				24733A7324DE2FEE0041D76D /* ViewController.swift */,
 				1B52E53C24E08FBD00D8F02B /* StatsPageController.swift */,
+				2498414D24E38EC1004AA652 /* StatsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24733A7424DE2FEE0041D76D /* ViewController.swift in Sources */,
+				2498414E24E38EC1004AA652 /* StatsViewController.swift in Sources */,
 				24B3039424DF243F00389D98 /* CovidData.swift in Sources */,
 				240AF92D24E06EFD00809FFE /* StatsModel.swift in Sources */,
 				24733A7024DE2FEE0041D76D /* AppDelegate.swift in Sources */,
