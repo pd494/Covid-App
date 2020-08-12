@@ -72,7 +72,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Hh3-M7-Ej5"/>
+                    <navigationItem key="navigationItem" id="Hh3-M7-Ej5">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="u3H-7Z-xGa">
+                            <rect key="frame" x="141.5" y="6" width="131" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="First"/>
+                                <segment title="Second"/>
+                            </segments>
+                        </segmentedControl>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchTextBar" destination="8uf-i7-F1b" id="rQe-2n-i5R"/>
                         <outlet property="tableView" destination="Jck-Ay-Mpi" id="9YS-0A-H6r"/>
@@ -81,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="326.08695652173918" y="114.50892857142857"/>
+            <point key="canvasLocation" x="1533" y="115"/>
         </scene>
         <!--Stats Page Controller-->
         <scene sceneID="hhb-0T-jdJ">
@@ -121,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3RU-VY-7WY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1159.4202898550725" y="118.52678571428571"/>
+            <point key="canvasLocation" x="2330" y="115"/>
         </scene>
         <!--Identify-->
         <scene sceneID="V94-Ja-6e3">
@@ -132,7 +142,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5J9-ti-l9z">
-                                <rect key="frame" x="15" y="139" width="384" height="153"/>
+                                <rect key="frame" x="15" y="183" width="384" height="153"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="output-onlinepngtools-2" translatesAutoresizingMaskIntoConstraints="NO" id="Mha-Os-jK5">
                                         <rect key="frame" x="0.0" y="93" width="86" height="53"/>
@@ -169,38 +179,40 @@
                                     <constraint firstAttribute="bottom" secondItem="Mha-Os-jK5" secondAttribute="bottom" constant="7" id="rv9-8j-pvf"/>
                                 </constraints>
                             </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qpD-3k-2Vb">
-                                <rect key="frame" x="141.5" y="73" width="131" height="31"/>
-                                <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                </segments>
-                                <connections>
-                                    <action selector="tabChanged:" destination="aNa-Ds-2Q1" eventType="valueChanged" id="7P6-uh-rSI"/>
-                                </connections>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.3826276406501013" green="0.77312325107630542" blue="0.96130555868148804" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="5J9-ti-l9z" firstAttribute="centerX" secondItem="7YK-ZG-8Ih" secondAttribute="centerX" id="9Ji-Vp-jX5"/>
-                            <constraint firstItem="5J9-ti-l9z" firstAttribute="top" secondItem="qpD-3k-2Vb" secondAttribute="bottom" constant="36" id="CUZ-bd-lGJ"/>
                             <constraint firstItem="xs0-hb-Z4x" firstAttribute="trailing" secondItem="5J9-ti-l9z" secondAttribute="trailing" constant="15" id="NTH-DN-89E"/>
                             <constraint firstItem="5J9-ti-l9z" firstAttribute="leading" secondItem="xs0-hb-Z4x" secondAttribute="leading" constant="15" id="PIu-86-VTJ"/>
                             <constraint firstItem="5J9-ti-l9z" firstAttribute="top" secondItem="xs0-hb-Z4x" secondAttribute="top" constant="95" id="Rar-RW-EBv"/>
-                            <constraint firstItem="qpD-3k-2Vb" firstAttribute="top" secondItem="xs0-hb-Z4x" secondAttribute="top" constant="29" id="ZnC-0w-pwJ"/>
-                            <constraint firstItem="qpD-3k-2Vb" firstAttribute="centerX" secondItem="7YK-ZG-8Ih" secondAttribute="centerX" id="x1a-Gb-aGW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xs0-hb-Z4x"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Identify" image="person.fill" catalog="system" selectedImage="person.fill" id="TkR-9J-pqx"/>
+                    <navigationItem key="navigationItem" id="ISg-gp-DFQ">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="qpD-3k-2Vb">
+                            <rect key="frame" x="141.5" y="6" width="131" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="First"/>
+                                <segment title="Second"/>
+                            </segments>
+                            <connections>
+                                <action selector="tabChanged:" destination="aNa-Ds-2Q1" eventType="valueChanged" id="7P6-uh-rSI"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
                     <connections>
                         <outlet property="casesLabel" destination="BQm-ap-Bfr" id="arp-Ch-MCW"/>
                         <outlet property="worldCasesView" destination="5J9-ti-l9z" id="uHR-qA-zrR"/>
+                        <segue destination="BYZ-38-t0r" kind="show" id="skV-pz-HZU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TSL-KM-eFe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-584.79999999999995" y="862.21889055472275"/>
+            <point key="canvasLocation" x="594" y="115"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="FdV-Cs-KFq">
@@ -212,7 +224,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="aNa-Ds-2Q1" kind="relationship" relationship="viewControllers" id="Dbs-8Z-s8Q"/>
                         <segue destination="SB3-zt-VXT" kind="relationship" relationship="viewControllers" destinationCreationSelector="ShowViewData" id="g8K-nC-PSg"/>
                     </connections>
                 </tabBarController>
@@ -232,7 +243,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="efv-Jx-AJc"/>
+                        <segue destination="aNa-Ds-2Q1" kind="relationship" relationship="rootViewController" id="sqY-Ez-CnX"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Kf-mU-fLg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
