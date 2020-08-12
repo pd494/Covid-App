@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VAO-8h-D4s">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VAO-8h-D4s">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -76,11 +76,52 @@
                     <connections>
                         <outlet property="searchTextBar" destination="8uf-i7-F1b" id="rQe-2n-i5R"/>
                         <outlet property="tableView" destination="Jck-Ay-Mpi" id="9YS-0A-H6r"/>
+                        <segue destination="kns-sb-dND" kind="show" identifier="ShowViewData" id="bQK-RV-kjV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="326.08695652173918" y="114.50892857142857"/>
+        </scene>
+        <!--Stats Page Controller-->
+        <scene sceneID="hhb-0T-jdJ">
+            <objects>
+                <viewController id="kns-sb-dND" customClass="StatsPageController" customModule="Covid_Cases" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b4e-LJ-TTJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="covidart" translatesAutoresizingMaskIntoConstraints="NO" id="WCl-p4-zht">
+                                <rect key="frame" x="25" y="104" width="364" height="110"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HHf-Jy-dxo">
+                                <rect key="frame" x="0.0" y="233" width="414" height="663"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="663" id="Qmx-72-YX9"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="HHf-Jy-dxo" secondAttribute="trailing" id="8B5-zl-2HF"/>
+                            <constraint firstItem="WCl-p4-zht" firstAttribute="top" secondItem="ist-pu-2GK" secondAttribute="top" constant="16" id="9Qo-8z-xrO"/>
+                            <constraint firstItem="HHf-Jy-dxo" firstAttribute="leading" secondItem="b4e-LJ-TTJ" secondAttribute="leading" id="OBs-3W-sCL"/>
+                            <constraint firstItem="HHf-Jy-dxo" firstAttribute="centerX" secondItem="WCl-p4-zht" secondAttribute="centerX" id="QCY-fF-hUv"/>
+                            <constraint firstItem="WCl-p4-zht" firstAttribute="leading" secondItem="ist-pu-2GK" secondAttribute="leading" constant="25" id="WKe-Fb-Nv5"/>
+                            <constraint firstItem="HHf-Jy-dxo" firstAttribute="top" secondItem="WCl-p4-zht" secondAttribute="bottom" constant="19" id="lfg-ys-yNz"/>
+                            <constraint firstAttribute="bottom" secondItem="HHf-Jy-dxo" secondAttribute="bottom" id="w7i-WS-m0l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ist-pu-2GK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aLX-SZ-7qo"/>
+                    <connections>
+                        <outlet property="tableView" destination="HHf-Jy-dxo" id="J88-4R-ZFg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3RU-VY-7WY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1159.4202898550725" y="118.52678571428571"/>
         </scene>
         <!--Identify-->
         <scene sceneID="V94-Ja-6e3">
@@ -200,6 +241,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="covidart" width="2500" height="1019"/>
         <image name="doc.text.magnifyingglass" catalog="system" width="116" height="128"/>
         <image name="output-onlinepngtools-2" width="1220" height="816"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
