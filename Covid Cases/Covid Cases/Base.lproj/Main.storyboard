@@ -172,7 +172,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="aNa-Ds-2Q1" kind="relationship" relationship="viewControllers" id="Dbs-8Z-s8Q"/>
-                        <segue destination="SB3-zt-VXT" kind="relationship" relationship="viewControllers" id="g8K-nC-PSg"/>
+                        <segue destination="SB3-zt-VXT" kind="relationship" relationship="viewControllers" destinationCreationSelector="ShowViewData" id="g8K-nC-PSg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kxb-fd-vwt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
