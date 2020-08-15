@@ -65,5 +65,9 @@ extension StatsPageController: UITableViewDataSource {
         return cell
     }
     
+    func updateSegment(_ sender: UISegmentedControl)
+    {
+        sender.isEnabledForSegment(at: 1)
+    }
 }
 

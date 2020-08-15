@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController{
+    var currentIndex: Int = 0
+
     
     @IBOutlet weak var searchTextBar: UISearchBar!
     
@@ -26,6 +28,8 @@ class ViewController: UIViewController{
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        navigationItem.hidesBackButton = true
+
         tableView.dataSource = self
         tableView.delegate = self
 
@@ -102,8 +106,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        
-        
         if segue.identifier == "ShowViewData" {
             let destinationVC = segue.destination as! StatsPageController
             destinationVC.countryName = selectedCountry
@@ -140,4 +142,14 @@ extension ViewController: UISearchBarDelegate
     
         searchBar.endEditing(true)
     }
+    
+    func updateSegment(_ sender: UISegmentedControl)
+    {
+        sender.isEnabledForSegment(at: 1)
+    }
+    
+    
+    
+    
+    
 }

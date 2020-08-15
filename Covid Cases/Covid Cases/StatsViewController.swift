@@ -20,6 +20,7 @@ class StatsViewController: UIViewController, CovidManagerDelegate {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+
         
         c.delegate = self
         

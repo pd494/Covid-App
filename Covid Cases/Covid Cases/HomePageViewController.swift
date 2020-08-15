@@ -22,7 +22,8 @@ class HomePageViewController: UIViewController, CovidManagerDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+        navigationItem.hidesBackButton = true
+
         worldCasesView.layer.cornerRadius = 15
         worldCasesView.frame.size.height = 10
         c.delegate2 = self
@@ -30,6 +31,20 @@ class HomePageViewController: UIViewController, CovidManagerDelegate
 
     }
     
+    @IBAction func tabChanged(_ sender: UISegmentedControl)
+    {
+        var s = ViewController()
+
+        if sender.selectedSegmentIndex == 1
+        {
+            s.updateSegment(sender)
+
+            self.performSegue(withIdentifier: "segue", sender: (Any).self)
+        }
+        else{
+            s.dismiss(animated: true, completion: nil)
+        }
+    }
     func updateView(statsModel: StatsModel)
     {
         DispatchQueue.main.async
@@ -38,8 +53,4 @@ class HomePageViewController: UIViewController, CovidManagerDelegate
         }
     }
     
-    @IBAction func tabChanged(_ sender: UISegmentedControl)
-    {
-      
-    }
 }
