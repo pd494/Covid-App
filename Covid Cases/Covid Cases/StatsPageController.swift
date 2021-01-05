@@ -10,6 +10,7 @@ import UIKit
 
 class StatsPageController: UIViewController, CovidManagerDelegate {
     
+    
     @IBOutlet weak var tableView: UITableView!
     
     var countryName: String = ""
@@ -64,5 +65,9 @@ extension StatsPageController: UITableViewDataSource {
         return cell
     }
     
+    func updateSegment(_ sender: UISegmentedControl)
+    {
+        sender.isEnabledForSegment(at: 1)
+    }
 }
 

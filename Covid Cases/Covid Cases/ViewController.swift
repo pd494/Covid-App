@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController{
+    var currentIndex: Int = 0
+
     
     @IBOutlet weak var searchTextBar: UISearchBar!
     
@@ -26,6 +28,8 @@ class ViewController: UIViewController{
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        navigationItem.hidesBackButton = true
+
         tableView.dataSource = self
         tableView.delegate = self
 
@@ -34,7 +38,7 @@ class ViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
+        //navigationController?.setNavigationBarHidden(true, animated: animated)
         
         if let index = self.tableView.indexPathForSelectedRow{
             self.tableView.deselectRow(at: index, animated: true)
@@ -43,7 +47,7 @@ class ViewController: UIViewController{
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+       // navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     
@@ -102,12 +106,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.identifier == "segue"
-        {
-            let destinationVC = segue.destination as! StatsViewController
-            destinationVC.countryName = selectedCountry
-        }
-        
         if segue.identifier == "ShowViewData" {
             let destinationVC = segue.destination as! StatsPageController
             destinationVC.countryName = selectedCountry
@@ -144,4 +142,14 @@ extension ViewController: UISearchBarDelegate
     
         searchBar.endEditing(true)
     }
+    
+    func updateSegment(_ sender: UISegmentedControl)
+    {
+        sender.isEnabledForSegment(at: 1)
+    }
+    
+    
+    
+    
+    
 }
